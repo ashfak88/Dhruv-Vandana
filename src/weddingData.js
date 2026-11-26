@@ -98,6 +98,30 @@ export const Sp = [
 // "Family" section (replaces "Wedding Party"). Cards without a photo show a monogram.
 export const tt = [
   {
+    name: 'Groom’s Family',
+    title: 'वर पक्ष · द्विवेदी परिवार',
+    photo: '/images/family/family-groom.jpg',
+    ratio: 1536 / 1024,
+    pos: '50% 30%',
+    html: '<p>स्नेह और आशीर्वाद से भरा हमारा परिवार, जो इस मंगल अवसर पर आपका हार्दिक स्वागत करता है। ❤️</p>',
+  },
+  {
+    name: 'Bride’s Brother',
+    title: 'वधू के भाई',
+    photo: '/images/family/bride-brother.jpg',
+    ratio: 1600 / 1064,
+    pos: '50% 30%',
+    html: '',
+  },
+  {
+    name: 'Groom’s Sister',
+    title: 'वर की बहन',
+    photo: '/images/family/groom-sister.jpg',
+    ratio: 4 / 5,
+    pos: '50% 45%',
+    html: '',
+  },
+  {
     name: 'श्री रामचरित द्विवेदी & श्रीमती उमा द्विवेदी',
     title: 'वर पक्ष · Groom’s Parents',
     monogram: 'ध्रुव',
