@@ -24,8 +24,8 @@ export const ms = { whatsapp: '918319651960', email: '' }
 export const Pe = {
   hero: '/images/couple-portrait.jpeg',
   story: '/images/couple-stage.jpeg',
-  schedule: '/images/couple-selfie.jpeg',
-  party: '/images/couple-portrait.jpeg',
+  schedule: '/images/couple-portrait.jpeg',
+  party: '/images/couple-stage.jpeg',
   ornTop: '/images/orn-top.webp',
   ornBottom: '/images/orn-bottom.webp',
 }
@@ -106,6 +106,14 @@ export const tt = [
     html: '<p>स्नेह और आशीर्वाद से भरा हमारा परिवार, जो इस मंगल अवसर पर आपका हार्दिक स्वागत करता है। ❤️</p>',
   },
   {
+    name: 'Bride’s Mother',
+    title: 'वधू की माता · श्रीमती शान्ति देवी',
+    photo: '/images/family/bride-mother.jpg',
+    ratio: 4 / 5,
+    pos: '50% 30%',
+    html: '',
+  },
+  {
     name: 'Bride’s Brother',
     title: 'वधू के भाई',
     photo: '/images/family/bride-brother.jpg',
@@ -145,5 +153,5 @@ export const tt = [
 export const Oc = [
   [{ src: '/images/couple-portrait.jpeg', tall: true }],
   [{ src: '/images/couple-stage.jpeg' }],
-  [{ src: '/images/couple-selfie.jpeg', tall: true }],
+  [{ src: '/images/family/family-groom.jpg' }],
 ]
