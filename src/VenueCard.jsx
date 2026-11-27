@@ -1,4 +1,4 @@
-// Venue card: hand-drawn style illustrated map + venue name, address and a "Get Directions" button.
+// Venue card: hand-drawn style illustrated map + venue name, address and a directions button.
 
 const TREES = [
   [38, 40, 13], [70, 22, 10], [118, 30, 12], [452, 26, 11], [488, 46, 14], [530, 22, 10], [566, 54, 13],
@@ -134,7 +134,7 @@ export default function VenueCard({ name, address, href }) {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M3 11 22 2l-9 19-2-8-8-2z" />
           </svg>
-          <span>Get Directions</span>
+          <span>मार्ग देखें</span>
         </a>
       </div>
     </div>

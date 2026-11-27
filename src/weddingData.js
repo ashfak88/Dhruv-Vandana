@@ -1,23 +1,24 @@
 // All wedding content lives here. Edit this file to change names, dates, events or photos.
+// All visible text is in Hindi.
 
-// Names & greeting (envelope label, header, menu, RSVP page)
+// Names & greeting (envelope label, header)
 export const Tt = {
-  names: 'Dhruv & Vandana',
-  greeting: 'ध्रुव कुमार संग वंदना — We can’t wait to celebrate our big day with you in Baikunthpur.',
+  names: 'ध्रुव संग वंदना',
+  greeting: 'आयुष्मान ध्रुव कुमार संग आयुष्मति वंदना — हमारे शुभ विवाह में आपकी प्रतीक्षा रहेगी।',
 }
 
 // Wedding hashtag shown near the end of the page
-export const Hashtag = '#DhruvWedsVandana'
+export const Hashtag = '#ध्रुवसंगवंदना'
 
 // Countdown target (wedding: Friday 11 Dec 2026, 8:00 PM IST)
 export const kp = '2026-12-11T20:00:00+05:30'
-// Date shown under the scratch card and on the RSVP page
-export const zc = 'Friday, December 11, 2026'
-// Date shown in the floating pill once revealed
-export const xp = 'December 11th, 2026'
+// Date shown under the scratch card
+export const zc = 'शुक्रवार, 11 दिसंबर 2026'
+// Date shown once revealed (short form)
+export const xp = '11 दिसंबर 2026'
 // Venue line
-export const Ic = 'N H Garden, Baikunthpur'
-// WhatsApp number that receives RSVPs (country code, no +)
+export const Ic = 'एन. एच. गार्डन, बैकुंठपुर'
+// WhatsApp number (country code, no +)
 export const ms = { whatsapp: '918319651960', email: '' }
 
 // Section photos
@@ -30,9 +31,16 @@ export const Pe = {
   ornBottom: '/images/orn-bottom.webp',
 }
 
-// "Invitation" section (replaces "Our Story")
+// Section titles
+export const Titles = {
+  story: 'निमंत्रण',
+  schedule: 'कार्यक्रम',
+  party: 'परिवार',
+}
+
+// "निमंत्रण" section
 export const Rr = {
-  heading: 'Invitation',
+  heading: 'निमंत्रण',
   subheading: 'सादर आमंत्रण',
   paragraphs: [
     '॥ श्री गणेशाय नमः ॥',
@@ -40,37 +48,36 @@ export const Rr = {
     'संग',
     'स्व. श्री सुशील कुमार शुक्ला एवं श्रीमती शान्ति देवी की सुपुत्री<br><strong>आयुष्मति वंदना</strong>',
     'के शुभ विवाह के पावन अवसर पर आप सपरिवार सादर आमंत्रित हैं। कृपया पधारकर नवदंपति को अपना आशीर्वाद प्रदान करें।',
-    'Together with our families, we joyfully invite you to celebrate our wedding and bless us as we begin this beautiful journey together.',
   ],
   closing: 'आपकी उपस्थिति ही हमारी शोभा है। ❤️💍',
 }
 
-const VENUE = 'N H Garden, Baikunthpur, Koriya, Chhattisgarh'
-
-// Schedule (events with the same date are grouped under one heading)
+// Schedule. Events with the same `dateHeading` are grouped under one date.
 export const Sp = [
   {
     name: 'उपनयन संस्कार, हल्दी, मेंहदी 🌼💛',
-    dateHeading: 'Thursday, December 10, 2026',
-    start: 'गुरुवार · Upanayan, Haldi & Mehendi',
+    dateHeading: 'गुरुवार, 10 दिसंबर 2026',
+    start: 'गुरुवार',
     end: null,
     startISO: '2026-12-10T10:00:00.000+05:30',
     endISO: '2026-12-10T22:00:00.000+05:30',
-    location: 'Baikunthpur, Koriya, Chhattisgarh',
+    location: 'जायसवाल कॉम्प्लेक्स, राम मंदिर के सामने, मनेन्द्रगढ़',
     dressCode: null,
     html: '<p>विवाह उत्सव का शुभारंभ — उपनयन संस्कार, हल्दी एवं मेंहदी की रस्में। हल्दी की रौनक, मेंहदी के रंग और अपनों के आशीर्वाद के साथ इस सुंदर सफ़र की शुरुआत में हमारे साथ शामिल हों। 💛✨</p>',
-    hideLocation: true,
-    showMap: false,
+    showMap: true,
+    venueName: 'जायसवाल कॉम्प्लेक्स',
+    venueAddress: 'राम मंदिर के सामने, मनेन्द्रगढ़',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Jaiswal+Complex+Ram+Mandir+Manendragarh+Chhattisgarh',
     whereToStay: false,
   },
   {
     name: 'बारात प्रस्थान 🐎',
-    dateHeading: 'Friday, December 11, 2026 2:00 PM',
-    start: '2:00 PM',
+    dateHeading: 'शुक्रवार, 11 दिसंबर 2026',
+    start: 'दोपहर 2:00 बजे',
     end: null,
     startISO: '2026-12-11T14:00:00.000+05:30',
     endISO: null,
-    location: 'Shri Ram Mandir, Baikunthpur',
+    location: 'निज निवास, श्री राम मंदिर',
     dressCode: null,
     html: '<p>बारात हमारे निज निवास <strong>श्री राम मंदिर</strong> से दोपहर 2:00 बजे बैकुंठपुर के लिए प्रस्थान करेगी।</p>',
     hideLocation: true,
@@ -78,72 +85,64 @@ export const Sp = [
     whereToStay: false,
   },
   {
-    name: 'शुभ विवाह · Wedding 💍',
-    dateHeading: 'Friday, December 11, 2026 8:00 PM',
-    start: '8:00 PM Onwards',
+    name: 'शुभ विवाह 💍',
+    dateHeading: 'शुक्रवार, 11 दिसंबर 2026',
+    start: 'रात्रि 8:00 बजे से',
     end: null,
     startISO: '2026-12-11T20:00:00.000+05:30',
     endISO: '2026-12-11T23:59:00.000+05:30',
-    location: VENUE,
-    dressCode: 'Traditional Attire',
-    html: '<p>शुभ विवाह समारोह एवं प्रीतिभोज। आपकी गरिमामयी उपस्थिति प्रार्थनीय है।</p><p>We’re getting married! Join us for the ceremony, dinner and celebrations.</p>',
+    location: 'एन. एच. गार्डन, बैकुंठपुर, कोरिया, छत्तीसगढ़',
+    dressCode: 'पारंपरिक वेशभूषा',
+    html: '<p>शुभ विवाह समारोह एवं प्रीतिभोज। आपकी गरिमामयी उपस्थिति प्रार्थनीय है।</p>',
     showMap: true,
-    venueName: "N H Garden",
-    venueAddress: "Park in Baikunthpur, Koriya, Chhattisgarh",
+    venueName: 'एन. एच. गार्डन',
+    venueAddress: 'बैकुंठपुर, कोरिया, छत्तीसगढ़',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=N+H+Garden+Baikunthpur+Koriya+Chhattisgarh',
     whereToStay: true,
   },
 ]
 
-// "Family" section (replaces "Wedding Party"). Cards without a photo show a monogram.
+// "परिवार" section. Cards without a photo show a monogram.
 export const tt = [
   {
-    name: 'Groom’s Family',
-    title: 'वर पक्ष · द्विवेदी परिवार',
+    name: 'वर पक्ष परिवार',
+    title: 'द्विवेदी परिवार',
     photo: '/images/family/family-groom.jpg',
     ratio: 1536 / 1024,
     pos: '50% 30%',
     html: '<p>स्नेह और आशीर्वाद से भरा हमारा परिवार, जो इस मंगल अवसर पर आपका हार्दिक स्वागत करता है। ❤️</p>',
   },
   {
-    name: 'Bride’s Mother',
-    title: 'वधू की माता · श्रीमती शान्ति देवी',
+    name: 'वधू की माता',
+    title: 'श्रीमती शान्ति देवी',
     photo: '/images/family/bride-mother.jpg',
     ratio: 4 / 5,
     pos: '50% 30%',
     html: '',
   },
   {
-    name: 'Bride’s Brother',
-    title: 'वधू के भाई',
+    name: 'वधू के भाई',
+    title: 'वधू पक्ष',
     photo: '/images/family/bride-brother.jpg',
     ratio: 1600 / 1064,
     pos: '50% 30%',
     html: '',
   },
   {
-    name: 'Groom’s Sister',
-    title: 'वर की बहन',
-    photo: '/images/family/groom-sister.jpg',
-    ratio: 4 / 5,
-    pos: '50% 45%',
-    html: '',
-  },
-  {
-    name: 'श्री रामचरित द्विवेदी & श्रीमती उमा द्विवेदी',
-    title: 'वर पक्ष · Groom’s Parents',
+    name: 'श्री रामचरित द्विवेदी एवं श्रीमती उमा द्विवेदी',
+    title: 'वर पक्ष · वर के माता-पिता',
     monogram: 'ध्रुव',
     html: '<p>आयुष्मान ध्रुव कुमार के माता-पिता, जो हर्ष एवं स्नेह के साथ आपको इस मंगल अवसर पर आमंत्रित करते हैं। ❤️</p>',
   },
   {
-    name: 'स्व. श्री सुशील कुमार शुक्ला & श्रीमती शान्ति देवी',
-    title: 'वधू पक्ष · Bride’s Parents',
+    name: 'स्व. श्री सुशील कुमार शुक्ला एवं श्रीमती शान्ति देवी',
+    title: 'वधू पक्ष · वधू के माता-पिता',
     monogram: 'वंदना',
     html: '<p>आयुष्मति वंदना के माता-पिता। आपकी उपस्थिति एवं आशीर्वाद इस पावन बंधन को और भी विशेष बना देंगे। ✨</p>',
   },
   {
     name: 'श्री रामचरित द्विवेदी',
-    title: 'निवेदक · Contact',
+    title: 'निवेदक · संपर्क',
     monogram: '☎',
     html: '<p>किसी भी जानकारी के लिए संपर्क करें:</p><p><a href="tel:+918319651960">+91 83196 51960</a><br><a href="tel:+919425583677">+91 94255 83677</a></p>',
   },

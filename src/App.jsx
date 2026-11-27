@@ -6,7 +6,7 @@ import { createPortal } from "react-dom";
 import { jsx, jsxs, Fragment } from "react/jsx-runtime";
 import VenueCard from "./VenueCard.jsx";
 import Credit from "./Credit.jsx";
-import { Hashtag, Tt, kp, zc, xp, Ic, ms, Pe, Rr, Sp, tt, Oc } from "./weddingData.js";
+import { Hashtag, Titles, Tt, kp, zc, xp, Ic, ms, Pe, Rr, Sp, tt, Oc } from "./weddingData.js";
 const C = React;
 const a = { jsx, jsxs, Fragment };
 const Lc = { createPortal };
@@ -239,7 +239,7 @@ function yp({
         a.jsx("img", {
           className: "envelope",
           src: t,
-          alt: "Floral embossed envelope with a wax seal",
+          alt: "मोहर लगा निमंत्रण लिफ़ाफ़ा",
           fetchpriority: "high",
           ref: (d) => {
             d && d.complete && d.naturalWidth && h(!0);
@@ -257,12 +257,12 @@ function yp({
         a.jsx("button", {
           className: "open-invitation",
           id: "open",
-          "aria-label": "Open the wedding invitation",
+          "aria-label": "विवाह निमंत्रण खोलें",
           disabled: r.openDisabled,
           onClick: o,
           children: a.jsxs("span", {
             className: "open-caption",
-            children: ["Open your invitation", a.jsx("small", { children: e })],
+            children: ["निमंत्रण खोलें", a.jsx("small", { children: e })],
           }),
         }),
         a.jsx("video", {
@@ -286,7 +286,7 @@ function yp({
           ref: l.skip,
           hidden: r.skipHidden,
           onClick: i,
-          children: "Skip opening",
+          children: "आगे बढ़ें",
         }),
       ],
     })
@@ -459,7 +459,7 @@ function jp({ active: e }) {
               : "welcome",
           ),
         "aria-label": "Scroll down",
-        children: [a.jsx("span", { children: "Scroll" }), a.jsx(Fc, {})],
+        children: [a.jsx("span", { children: "नीचे देखें" }), a.jsx(Fc, {})],
       }),
     ],
   });
@@ -474,10 +474,10 @@ function _p(e) {
   const r = Math.max(0, new Date(e).getTime() - t),
     l = Math.floor(r / 1e3);
   return [
-    zr(Math.floor(l / 86400), "day", "days"),
-    zr(Math.floor(l / 3600) % 24, "hr", "hrs"),
-    zr(Math.floor(l / 60) % 60, "min", "mins"),
-    zr(l % 60, "sec", "secs"),
+    zr(Math.floor(l / 86400), "दिन", "दिन"),
+    zr(Math.floor(l / 3600) % 24, "घंटा", "घंटे"),
+    zr(Math.floor(l / 60) % 60, "मिनट", "मिनट"),
+    zr(l % 60, "सेकंड", "सेकंड"),
   ].join(" ");
 }
 const Ir = [
@@ -639,10 +639,10 @@ function $c() {
         (x.fillStyle = "#535353"),
         (x.textAlign = "center"),
         (x.textBaseline = "middle"),
-        (x.font = '400 24px "Nixie One", Georgia, serif'),
-        x.fillText("Scratch to reveal", j / 2, R / 2 - 12),
-        (x.font = "500 11px Raleway, sans-serif"),
-        x.fillText("O U R   W E D D I N G   D A T E", j / 2, R / 2 + 18),
+        (x.font = '400 25px "Tiro Devanagari Hindi", Georgia, serif'),
+        x.fillText("खुरचें और तिथि देखें", j / 2, R / 2 - 12),
+        (x.font = "500 13px Mukta, sans-serif"),
+        x.fillText("हमारी शुभ विवाह तिथि", j / 2, R / 2 + 18),
         j > 0)
       )
         try {
@@ -741,8 +741,8 @@ function $c() {
               className: "scratch-foil scratch-css",
               onClick: f,
               children: [
-                a.jsx("span", { children: "Scratch to reveal" }),
-                a.jsx("small", { children: "our wedding date" }),
+                a.jsx("span", { children: "खुरचें और तिथि देखें" }),
+                a.jsx("small", { children: "हमारी शुभ विवाह तिथि" }),
               ],
             }),
           !e &&
@@ -796,7 +796,7 @@ function $c() {
         a.jsx("button", {
           className: "scratch-hint",
           onClick: f,
-          children: u ? "keep going" : "or tap to reveal",
+          children: u ? "थोड़ा और खुरचें" : "या यहाँ टैप करें",
         }),
     ],
   });
@@ -825,7 +825,7 @@ function Mp() {
             className: "view-details",
             onClick: () => eu("story"),
             children: [
-              a.jsx("span", { children: "View Details" }),
+              a.jsx("span", { children: "विवरण देखें" }),
               a.jsx(Fc, {}),
             ],
           }),
@@ -952,7 +952,7 @@ function Up({ event: e }) {
           "aria-haspopup": "true",
           "aria-expanded": t,
           onClick: () => n((l) => !l),
-          children: "Add to Calendar",
+          children: "कैलेंडर में जोड़ें",
         }),
         t &&
           a.jsxs("span", {
@@ -963,13 +963,13 @@ function Up({ event: e }) {
                 target: "_blank",
                 rel: "noopener noreferrer",
                 onClick: () => n(!1),
-                children: "Google Calendar",
+                children: "गूगल कैलेंडर",
               }),
               a.jsx("button", {
                 onClick: () => {
                   (Ap(e), n(!1));
                 },
-                children: "Apple / Outlook (.ics)",
+                children: "एप्पल / आउटलुक कैलेंडर",
               }),
             ],
           }),
@@ -978,7 +978,7 @@ function Up({ event: e }) {
   );
 }
 function Bp({ e }) {
-  const t = e.end ? `${e.start} to ${e.end}` : e.start;
+  const t = e.end ? `${e.start} से ${e.end}` : e.start;
   return a.jsxs("div", {
     className: "tl-event",
     children: [
@@ -1013,7 +1013,7 @@ function Bp({ e }) {
                   href: Dp(e),
                   target: "_blank",
                   rel: "noopener noreferrer",
-                  children: "Where to Stay",
+                  children: "ठहरने के स्थान",
                 }),
               ],
             }),
@@ -1027,7 +1027,7 @@ function Bp({ e }) {
                   href: hs(e),
                   target: "_blank",
                   rel: "noopener noreferrer",
-                  children: "Directions",
+                  children: "मार्ग देखें",
                 }),
               ],
             }),
@@ -1045,7 +1045,7 @@ function Hp() {
       a.jsxs("div", {
         className: "section-body",
         children: [
-          a.jsx("h2", { className: "section-title", children: "Schedule" }),
+          a.jsx("h2", { className: "section-title", children: Titles.schedule }),
           Ip(Sp).map((e) =>
             a.jsxs(
               "div",
@@ -1183,7 +1183,7 @@ function Vp() {
         children: [
           a.jsx("h2", {
             className: "section-title",
-            children: "Family",
+            children: Titles.party,
           }),
           a.jsx("div", {
             className: "party-grid",
@@ -1384,7 +1384,7 @@ function Zp() {
             className: "hashtag",
             children: [
               a.jsx("span", { className: "hashtag-orn", "aria-hidden": "true", children: "✦" }),
-              a.jsx("p", { className: "hashtag-label", children: "Share your moments with" }),
+              a.jsx("p", { className: "hashtag-label", children: "अपनी यादें साझा करें" }),
               a.jsx("p", { className: "hashtag-tag", children: Hashtag }),
               a.jsx("p", { className: "hashtag-sub", children: "शुभ विवाह · 11.12.2026" }),
             ],
